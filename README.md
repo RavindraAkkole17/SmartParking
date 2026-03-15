@@ -21,7 +21,7 @@ perticular day it shows as reserved and not able to book that slot to anyone aga
 ## Project Screenshots
 
 ### Parking Detection
-![Parking Detection](screenshots/parking.png)
+![Parking Detection](signUp.jpg)
 
 ### Vehicle Entry
 ![Vehicle Entry](screenshots/entry.png)
