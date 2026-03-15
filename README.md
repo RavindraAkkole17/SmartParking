@@ -31,5 +31,5 @@ perticular day it shows as reserved and not able to book that slot to anyone aga
 
 ### Navigation
 ![Navigation](map.jpg)
-###Booking History
+### Booking History
 ![bookingHistory](bookingHistory.jpg)
