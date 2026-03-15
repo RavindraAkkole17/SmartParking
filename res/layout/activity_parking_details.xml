@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#F4F4F4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F5F5F5">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#0077B5"
+            android:padding="15dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="5dp"
+                android:src="@android:drawable/ic_media_previous"
+                app:tint="#000000" />
+        </LinearLayout>
+
+        <!-- Parking Title -->
+        <TextView
+            android:id="@+id/tvParkingTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parking Name"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:textColor="#000000" />
+
+        <!-- Owner -->
+        <TextView
+            android:id="@+id/tvOwner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Owner:"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#444444" />
+
+        <!-- Slots -->
+        <TextView
+            android:id="@+id/tvSlots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Available Slots:"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#444444" />
+
+        <!-- Row: Select Date Button + Date Text -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layout_marginTop="12dp">
+
+            <Button
+                android:id="@+id/btnSelectDate"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:text="Select Date"
+                android:backgroundTint="#0077B5"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvSelectedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="No date selected"
+                android:textColor="#444444"
+                android:textSize="16sp"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <!-- SLOT LEGEND -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/slot_available" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Empty"
+                    android:textColor="#444444"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/slot_selected" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Selected"
+                    android:textColor="#444444"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/slot_booked" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Reaserved"
+                    android:textColor="#444444"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/slot_occupied" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Occupied"
+                    android:textColor="#444444"
+                    android:padding="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Progress Bar for Realtime Detection -->
+        <ProgressBar
+            android:id="@+id/progressLoading"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+
+        <!-- Slots RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSlots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="15dp"
+            android:overScrollMode="never" />
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btnPreBook"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Pre-Book Slot"
+            android:textAllCaps="false"
+            android:backgroundTint="#2ECC71"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="80dp"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/btnNavigate"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:text="Navigate to Parking"
+            android:textAllCaps="false"
+            android:backgroundTint="#FF5733"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="80dp"
+            android:padding="10dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA">
+
+    <!-- Top App Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#0077B5"
+        android:gravity="center_vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:text="Smart Parking Admin"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:text="Logout"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#D50000"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/slot_available" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Empty"
+                        android:textColor="#444444"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/slot_booked" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Reaserved"
+                        android:textColor="#444444"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/slot_occupied" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Occupied"
+                        android:textColor="#444444"
+                        android:padding="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSlots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="15dp"
+                android:overScrollMode="never" />
+
+            <EditText
+                android:id="@+id/etParkingName"
+                android:hint="Parking Name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#63666A"
+                android:textColorHint="@android:color/darker_gray"
+                android:background="@drawable/input_bg"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etOwner"
+                android:hint="Owner/Admin Name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:textColor="#63666A"
+                android:textColorHint="@android:color/darker_gray"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_bg"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etSlots"
+                android:hint="Number of Parking Slots"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:textColor="#63666A"
+                android:textColorHint="@android:color/darker_gray"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_bg"
+                android:textSize="16sp" />
+
+            <!-- NEW BUTTON: AUTO SET LOCATION -->
+            <Button
+                android:id="@+id/btnSetLocation"
+                android:text="Set Location Automatically"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:text="Save Parking Details"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textAllCaps="false"
+                android:backgroundTint="#0077B5"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+
+
+            <Button
+                android:id="@+id/btnViewBookings"
+                android:text="View All Bookings"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#FF9800"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textAllCaps="false" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

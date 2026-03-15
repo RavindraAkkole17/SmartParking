@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="24dp"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 🌟 Attractive Smart Parking Title Section -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+
+            <!-- Logo (Optional) -->
+            <ImageView
+                android:id="@+id/appLogo"
+                android:src="@drawable/ic_car_logo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Smart Parking Text -->
+            <TextView
+                android:id="@+id/tvAppTitle"
+                android:text="Smart Parking"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="#0077B5"
+                android:shadowColor="#55000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="4"
+                android:textColorHint="@android:color/darker_gray"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Input Fields -->
+        <EditText
+            android:id="@+id/etName"
+            android:hint="Full Name"
+            android:background="@drawable/input_bg"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="#63666A"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:hint="Phone Number"
+            android:background="@drawable/input_bg"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:inputType="phone"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="#63666A"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:hint="Email"
+            android:background="@drawable/input_bg"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="#63666A"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:hint="Password"
+            android:background="@drawable/input_bg"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="#63666A"
+            android:inputType="textPassword"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
+
+        <!-- Role Selector -->
+        <RadioGroup
+            android:id="@+id/roleGroup"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:textColorHint="@android:color/darker_gray"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbUser"
+                android:text="User"
+                android:textColor="@color/darker_gray"
+
+                android:checked="true"
+                android:layout_marginEnd="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/rbAdmin"
+                android:text="Admin"
+                android:textColor="@color/darker_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <!-- Signup Button -->
+        <Button
+            android:id="@+id/btnSignup"
+            android:text="Sign up"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#0077B5"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
+
+        <!-- OR -->
+        <TextView
+            android:text="or"
+            android:textColor="#999999"
+            android:textSize="16sp"
+            android:textColorHint="@android:color/darker_gray"
+
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:text="Already have an account? Login"
+            android:textColor="#0077B5"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>

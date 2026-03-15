@@ -1,0 +1,10 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/holo_purple" />
+
+    <item android:gravity="bottom|left" android:left="8dp" android:bottom="8dp">
+        <bitmap
+            android:src="@drawable/ic_car_demo"
+            android:alpha="0.10"
+            android:gravity="bottom|left" />
+    </item>
+</layer-list>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Parking Name -->
+        <TextView
+            android:id="@+id/tvParkingName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parking Name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <!-- Owner Name -->
+        <TextView
+            android:id="@+id/tvOwnerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Owner: Admin Name"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="#444444"/>
+
+        <!-- Slots -->
+        <TextView
+            android:id="@+id/tvSlots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slots: 20"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="#444444"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
