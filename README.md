@@ -1,9 +1,10 @@
 # Smart Parking System 🚗
 
 ## Project Description
-This project detects empty parking slots using image processing.
-If an obstacle is detected inside the parking slot coordinates, it is marked as occupied otherwise it is marked as empty or if user reserved for
-perticular day it shows as reserved and not able to book that slot to anyone again.
+This project detects empty parking slots using image processing.  
+If an obstacle is detected inside the parking slot coordinates, it is marked as **Occupied**.  
+Otherwise it is marked as **Empty**.  
+If a user reserves a slot for a particular day, it will show as **Reserved** and cannot be booked again.
 
 ## Technologies Used
 - YOLO
@@ -14,22 +15,21 @@ perticular day it shows as reserved and not able to book that slot to anyone aga
 
 ## Features
 - Detect empty parking slots
-- Show the slot availability status (Empty, Reserved, Occupied)
-- Navigation support from User location to Parking area
-- Online Payment facility
+- Show slot availability status (Empty, Reserved, Occupied)
+- Navigation support from user location to parking area
+- Online payment facility
+
+---
 
 ## Project Screenshots
 
-### SignUp page
-![Signup](signUp.jpg)
+<p align="center">
+  <img src="signUp.jpg" width="30%" />
+  <img src="SlotAvailabilityStatus.jpg" width="30%" />
+  <img src="paymentMode.jpg" width="30%" />
+</p>
 
-### Slot availability status
-![Availability status](SlotAvailabilityStatus.jpg)
-
-### Payment Mode
-![RazorPAy](paymentMode.jpg)
-
-### Navigation
-![Navigation](map.jpg)
-### Booking History
-![bookingHistory](bookingHistory.jpg)
+<p align="center">
+  <img src="map.jpg" width="30%" />
+  <img src="bookingHistory.jpg" width="30%" />
+</p>
