@@ -20,11 +20,16 @@ perticular day it shows as reserved and not able to book that slot to anyone aga
 
 ## Project Screenshots
 
-### Parking Detection
-![Parking Detection](signUp.jpg)
+### SignUp page
+![Signup](signUp.jpg)
 
-### Vehicle Entry
-![Vehicle Entry](screenshots/entry.png)
+### Slot availability status
+![Availability status](SlotAvailabilityStatus.jpg)
 
-### Report Generation
-![Report](screenshots/report.png)
+### Payment Mode
+![RazorPAy](paymentMode.jpg)
+
+### Navigation
+![Navigation](map.jpg)
+###Booking History
+![bookingHistory](bookingHistory.jpg)
